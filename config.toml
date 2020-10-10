@@ -1,4 +1,4 @@
-baseurl = "https://neillock.co.uk/"
+baseurl = "https://www.neillock.co.uk/"
 title = "neillock.co.uk"
 theme = "pulp"
 canonifyurls = true
