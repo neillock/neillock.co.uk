@@ -16,8 +16,9 @@ hasCJKLanguage = true
     # avatarDescription = "My avatar description"
     favicon = "favicon.ico"
     description = """
-        Senior Solution Architect/Team Lead at Amazon Web Services (we are <a href="https://www.amazon.jobs/en/landing_pages/aws-startupbd?cmpid=SMOTAW5518B">hiring</a> contact me on LinkedIn), Ex YC Co-Founder and first full time engineer at <a href="www.moneysavingexpert.com">MoneySavingExpert.com</a>
-    """
+Senior Solution Architect/Team Lead at Amazon Web Services"""
+    body = """
+Senior Solution Architect/Team Lead at Amazon Web Services (we are <a href="https://www.amazon.jobs/en/landing_pages/aws-startupbd?cmpid=SMOTAW5518B">hiring</a> contact me on LinkedIn), Ex YC Co-Founder and first full time engineer at <a href="www.moneysavingexpert.com">MoneySavingExpert.com</a>"""
     publicationYear = "2020"
     # listPageDateFormat = "January, 2006" # See https://gohugo.io/functions/format/
     # singlePageDateFormat = "January 2, 2006"
