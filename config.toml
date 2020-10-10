@@ -13,6 +13,7 @@ hasCJKLanguage = true
 [params]
     author = "Neil Lock"
     avatar = "avatar.jpg"
+    avatar404 = "avatar-sad.jpg"
     # avatarDescription = "My avatar description"
     favicon = "favicon.ico"
     description = """
