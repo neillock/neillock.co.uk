@@ -1,0 +1,53 @@
+baseurl = "https://neillock.co.uk/"
+title = "neillock.co.uk"
+theme = "pulp"
+canonifyurls = true
+hasCJKLanguage = true
+# pygmentsCodefences = true
+# pygmentsUseClasses = true
+# googleAnalytics = "{your tracking code}"
+
+[markup.goldmark.renderer]
+    unsafe = true # Allow user HTML tags
+
+[params]
+    author = "Neil Lock"
+    avatar = "avatar.jpg"
+    # avatarDescription = "My avatar description"
+    favicon = "favicon.ico"
+    description = """
+        Senior Solution Architect/Team Lead at Amazon Web Services (we are <a href="https://www.amazon.jobs/en/landing_pages/aws-startupbd?cmpid=SMOTAW5518B">hiring</a> contact me on LinkedIn), Ex YC Co-Founder and first full time engineer at <a href="www.moneysavingexpert.com">MoneySavingExpert.com</a>
+    """
+    publicationYear = "2020"
+    # listPageDateFormat = "January, 2006" # See https://gohugo.io/functions/format/
+    # singlePageDateFormat = "January 2, 2006"
+    # custom_css = ["/css/custom.css"]
+    # custom_js = ["/js/custom.js"]
+
+# Make sure setting a following option for search bar to work
+[outputs]
+    section = ["JSON", "HTML"]
+    term = ["JSON", "HTML"]
+
+
+
+[[menu.main]]
+    identifier = "twitter"
+    # name = "Twitter"
+    pre = "<i class='fab fa-twitter fa-lg'></i>"
+    url = "https://twitter.com/neillock"
+    weight = 20
+
+[[menu.main]]
+    identifier = "github"
+    # name = "GitHub"
+    pre = "<i class='fab fa-github fa-lg'></i>"
+    url = "https://github.com/neillock"
+    weight = 30
+
+[[menu.main]]
+    identifier = "linkdin"
+    # name = "Email"
+    pre = "<i class='fab fa-linkedin fa-lg'></i>"
+    url = "https://www.linkedin.com/in/neilwlock/"
+    weight = 40
