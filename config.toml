@@ -17,9 +17,9 @@ hasCJKLanguage = true
     # avatarDescription = "My avatar description"
     favicon = "favicon.ico"
     description = """
-Senior Startup Solution Architect Manager at Amazon Web Services"""
+Manager at looking after UK Digital Native customers within Google Cloud"""
     body = """
-Senior Startup Solution Architect Manager at Amazon Web Services (we are <a href="https://www.amazon.jobs/en/landing_pages/aws-startupbd?cmpid=SMOTAW5518B">hiring</a> contact me on <a href="https://www.linkedin.com/in/neilwlock/">LinkedIn</a>), Ex YC Co-Founder and first full time engineer at <a href="www.moneysavingexpert.com">MoneySavingExpert.com</a>"""
+Manager within Google Cloud looking after some of the UK's leading Digital Native Businesses, contact me on <a href="https://www.linkedin.com/in/neilwlock/">LinkedIn</a>). Used to work at Amazon Web Services in their Startup team, Ex YC Co-Founder and first full time engineer at <a href="www.moneysavingexpert.com">MoneySavingExpert.com</a>"""
     publicationYear = "2020"
     # listPageDateFormat = "January, 2006" # See https://gohugo.io/functions/format/
     # singlePageDateFormat = "January 2, 2006"
