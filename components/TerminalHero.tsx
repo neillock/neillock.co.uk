@@ -79,8 +79,6 @@ const TerminalHero: React.FC<Props> = ({ onHover }) => {
   const BADGE_WIDTH = 160;
   const BADGE_HEIGHT = 280;
 
-  const isZooMode = document.body.classList.contains('zoo-mode');
-
   const resetToInitialLayout = () => {
     if (containerRef.current) {
       const containerWidth = containerRef.current.offsetWidth;
@@ -230,92 +228,6 @@ const TerminalHero: React.FC<Props> = ({ onHover }) => {
     zIndex: isBadgeDragging ? 9999 : (lastFocused === 'BADGE' ? 150 : 100),
     transition: isBadgeDragging ? 'none' : 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
   };
-
-  if (isZooMode) {
-    return (
-      <section className="mb-20">
-        <div className="bg-slate-900 rounded-3xl overflow-hidden border-8 border-slate-800 shadow-2xl aspect-video md:aspect-[21/9] flex flex-col">
-          <div className="p-4 bg-slate-800 border-b border-slate-700 flex justify-between items-center px-8">
-            <div className="flex items-center gap-3">
-              <span className="text-[#2D8CFF] font-black italic">Zoo-m</span>
-              <span className="text-white font-bold text-sm">Meeting with Neil Lock</span>
-            </div>
-            <div className="flex items-center gap-4 text-slate-300 font-mono text-xs">
-              <span>REC 🔴</span>
-              <span>12:34 PM</span>
-            </div>
-          </div>
-          
-          <div className="flex-grow grid grid-cols-2 md:grid-cols-4 gap-2 p-2 bg-[#1C1C1E]">
-            {/* Participant 1: Red Panda */}
-            <div className="bg-[#2C2C2E] rounded-xl relative overflow-hidden flex items-center justify-center border-2 border-transparent hover:border-[#2D8CFF] transition-all group">
-              <span className="text-6xl group-hover:scale-110 transition-transform">🐼</span>
-              <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-black/50 text-white text-[10px] rounded backdrop-blur-md">
-                Red Panda (Co-Host)
-              </div>
-              <div className="absolute top-2 right-2 w-4 h-4 rounded-full bg-green-500 border-2 border-[#2C2C2E]" />
-            </div>
-
-            {/* Participant 2: Monkey */}
-            <div className="bg-[#2C2C2E] rounded-xl relative overflow-hidden flex items-center justify-center border-2 border-[#2D8CFF] shadow-[0_0_15px_rgba(45,140,255,0.4)] group">
-              <span className="text-6xl group-hover:scale-110 transition-transform">🐒</span>
-              <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-black/50 text-white text-[10px] rounded backdrop-blur-md">
-                Monkey (Active Speaker)
-              </div>
-              <div className="absolute top-2 right-2 w-4 h-4 rounded-full bg-green-500 border-2 border-[#2C2C2E]" />
-            </div>
-
-            {/* Participant 3: Neil */}
-            <div className="bg-[#2C2C2E] rounded-xl relative overflow-hidden flex items-center justify-center border-2 border-transparent hover:border-[#2D8CFF] transition-all group">
-              <img src="images/me.jpg" alt="Neil" className="w-full h-full object-cover opacity-80" onError={e => e.currentTarget.src='https://picsum.photos/200'} />
-              <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-black/50 text-white text-[10px] rounded backdrop-blur-md">
-                Neil Lock (Host)
-              </div>
-            </div>
-
-            {/* Participant 4: Capybara (Waiting Room) */}
-            <div className="bg-[#2C2C2E] rounded-xl relative overflow-hidden flex items-center justify-center border-2 border-transparent hover:border-[#2D8CFF] transition-all group">
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-6xl animate-bounce">🦦</span>
-                <span className="text-[10px] text-yellow-400 font-bold uppercase tracking-widest">In Waiting Room</span>
-              </div>
-              <div className="absolute inset-0 bg-blue-500/10 opacity-40 group-hover:opacity-60 transition-opacity" />
-              <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-black/50 text-white text-[10px] rounded backdrop-blur-md">
-                Zen Capybara
-              </div>
-            </div>
-          </div>
-
-          <div className="p-4 bg-slate-800 flex justify-center gap-6">
-            <button className="flex flex-col items-center gap-1 group">
-              <div className="w-10 h-10 rounded-xl bg-[#3C3C3E] flex items-center justify-center group-hover:bg-[#4C4C4E] transition-colors">
-                🔇
-              </div>
-              <span className="text-[9px] text-slate-400 uppercase font-bold">Mute</span>
-            </button>
-            <button className="flex flex-col items-center gap-1 group">
-              <div className="w-10 h-10 rounded-xl bg-[#3C3C3E] flex items-center justify-center group-hover:bg-[#4C4C4E] transition-colors">
-                🎥
-              </div>
-              <span className="text-[9px] text-slate-400 uppercase font-bold">Stop Video</span>
-            </button>
-            <button className="flex flex-col items-center gap-1 group">
-              <div className="w-10 h-10 rounded-xl bg-green-600 flex items-center justify-center hover:bg-green-500 transition-colors">
-                🐒
-              </div>
-              <span className="text-[9px] text-slate-400 uppercase font-bold">Share Screen</span>
-            </button>
-            <button className="flex flex-col items-center gap-1 group">
-              <div className="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center hover:bg-red-500 transition-colors">
-                🚪
-              </div>
-              <span className="text-[9px] text-slate-400 uppercase font-bold">Leave</span>
-            </button>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section ref={containerRef} style={{ height: containerHeight }} className={`relative min-h-[140px] mb-0 pb-0 ${isFullScreen || isTermDragging || isTermResizing || isBadgeDragging ? 'z-[4000]' : 'z-10'}`} onMouseEnter={() => onHover('HERO_SECTION')} onMouseLeave={() => onHover(null)}>
