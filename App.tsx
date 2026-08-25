@@ -6,7 +6,6 @@ import MultimodalAgent from './components/MultimodalAgent';
 import ReadmeSection from './components/ReadmeSection';
 import ContactJSON from './components/ContactJSON';
 import LifeBoard from './components/LifeBoard';
-import ThemeStamper from './components/ThemeStamper';
 
 type GeminiAction = 'SUMMARIZE' | 'AUDIO' | 'IMAGE' | null;
 type AppTheme = 'modern' | 'classic' | 'weather' | 'disney';
@@ -281,9 +280,6 @@ const App: React.FC = () => {
       ${isWeatherMode ? 'weather-mode bg-slate-900 text-slate-300' : ''}
       ${isDisneyMode ? 'disney-mode bg-indigo-950 text-indigo-100 cursor-magic' : ''}
       ${theme === 'modern' ? 'dot-grid bg-white text-black' : ''}`}>
-      
-      <ThemeStamper onApplyWeather={() => handleThemeSelect('weather')} />
-
       {isDisneyMode && <MagicWandTrail />}
 
       {isWeatherMode && (
@@ -613,7 +609,15 @@ const App: React.FC = () => {
                       </svg>
                     </div>
                   )}
-                  {theme === 'modern' ? '✨ Modern' : theme === 'classic' ? '🦖 Classic' : theme === 'weather' ? '🌧️ Weather' : '🏰 Disney'}
+                  <div className="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">
+                      <path d="M12 20a8 8 0 1 0-8-8c0 1.5 1.5 3 3 3s3 1.5 3 3c0 1 1 2 2 2Z" />
+                      <path d="M9 11v.01" />
+                      <path d="M15 11v.01" />
+                      <path d="M12 7v.01" />
+                    </svg>
+                    Theme
+                  </div>
                 </button>
               </div>
             </div>

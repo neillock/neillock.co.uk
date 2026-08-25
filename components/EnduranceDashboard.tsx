@@ -26,7 +26,7 @@ const Widget: React.FC<WidgetProps> = ({ label, value, status = 'success', onHov
       {typeof value === 'string' ? <span className="text-2xl font-bold tracking-tighter">{value}</span> : value}
     </div>
     <div className="mt-4 text-[9px] font-mono text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity">
-      Click for detailed metrics >>
+      Click for detailed metrics &gt;&gt;
     </div>
   </div>
 );

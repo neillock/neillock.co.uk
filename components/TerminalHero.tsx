@@ -84,8 +84,8 @@ const TerminalHero: React.FC<Props> = ({ onHover }) => {
       const containerWidth = containerRef.current.offsetWidth;
       const terminalWidth = Math.min(containerWidth - 48, 920); 
       
-      const initialBadgeX = terminalWidth - (BADGE_WIDTH * 0.7); 
-      const initialBadgeY = 0; 
+      const initialBadgeX = terminalWidth - (BADGE_WIDTH * 0.2); 
+      const initialBadgeY = 30; 
       
       setBadgePos({ x: Math.max(10, initialBadgeX), y: initialBadgeY });
       setTermPos({ x: null, y: null });
